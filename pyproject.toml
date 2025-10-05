@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "custom-mes"
+version = "0.1.0"
+description = "Custom Manufacturing Execution System integration service for AspenTech system:inmation QMIB"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  {name = "EBR Team"}
+]
+license = {text = "MIT"}
+dependencies = [
+  "fastapi>=0.110.0",
+  "uvicorn[standard]>=0.29.0",
+  "httpx>=0.27.0",
+  "pydantic>=2.6.0",
+  "pydantic-settings>=2.2.1",
+  "tenacity>=8.2.3",
+  "python-dotenv>=1.0.1",
+  "sqlalchemy>=2.0.25"
+]
+
+[project.urls]
+"Homepage" = "https://example.com/custom-mes"
+"Repository" = "https://example.com/custom-mes/repo"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
