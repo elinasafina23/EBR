@@ -1,0 +1,12 @@
+# Example configuration for the custom MES integration service.
+environment: development
+allowed_origins:
+  - http://localhost:3000
+qmib:
+  base_url: "https://inmation-gateway.local/api/qmib"
+  username: "mes-service"
+  password: "change-me"
+  verify_ssl: false
+  timeout_seconds: 60
+database:
+  url: "sqlite:///./mes.db"
